@@ -1,3 +1,4 @@
+import 'package:ebook/pages/book_detail.dart';
 import 'package:ebook/theme.dart';
 import 'package:flutter/material.dart';
 
@@ -15,29 +16,36 @@ class TrendingCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 207,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          ClipRRect(
-            borderRadius: BorderRadius.circular(10),
-            child: Image.asset(
-              imageUrl,
-              width: 110,
-              height: 160,
+      child: InkWell(
+        onTap: () {
+          Navigator.push(context, MaterialPageRoute(builder: (context) {
+            return BookDetail();
+          }));
+        },
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            ClipRRect(
+              borderRadius: BorderRadius.circular(10),
+              child: Image.asset(
+                imageUrl,
+                width: 110,
+                height: 160,
+              ),
             ),
-          ),
-          SizedBox(
-            height: 8,
-          ),
-          Text(
-            actor,
-            style: subtitleTextStyle,
-          ),
-          Text(
-            title,
-            style: titleTextStyle,
-          ),
-        ],
+            SizedBox(
+              height: 8,
+            ),
+            Text(
+              actor,
+              style: subtitleTextStyle,
+            ),
+            Text(
+              title,
+              style: titleTextStyle,
+            ),
+          ],
+        ),
       ),
     );
   }

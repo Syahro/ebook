@@ -10,6 +10,7 @@ Color greyColor = Color(0XFFBDBDBD);
 Color lightGreyColor = Color(0XFFF3F3F3);
 Color greenColor = Color(0XFF098B5C);
 Color borderColor = Color(0XFFAFAFAF);
+Color mediumGrey = Color(0XFFF7F7F7);
 
 TextStyle titleTextStyle = GoogleFonts.poppins(
   fontSize: 16,
